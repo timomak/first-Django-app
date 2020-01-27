@@ -8,7 +8,7 @@ $ pip install Django
 
 ## Create Project
 ```
-$django-admin startproject mysite
+$ django-admin startproject mysite
 ```
 
 *This will make the following:*
@@ -60,3 +60,15 @@ polls/
 ```
 
 This directory structure will house the poll application.
+
+## Making model changes
+* Change your models (in models.py).
+* Run python manage.py makemigrations to create migrations for those changes
+* Run python manage.py migrate to apply those changes to the database.
+
+```
+$ python manage.py migrate
+$ python manage.py makemigrations polls
+$ python manage.py sqlmigrate polls 0001
+$ python manage.py migrate
+```
